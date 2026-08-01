@@ -448,6 +448,44 @@ section {
     justify-content: center;
 }
 
+/* --- Gallery Section --- */
+.gallery-section {
+    background-color: rgba(22, 30, 49, 0.1);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid #222c41;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    background-color: var(--dark-card);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
 /* --- Installation Steps Section --- */
 .installation {
     background-color: rgba(22, 30, 49, 0.2);
